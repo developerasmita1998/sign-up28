@@ -1,0 +1,36 @@
+.outer{
+    
+}
+
+
+
+.inner{
+border: 1px solid black;
+ display: flexbox;   
+justify-content: center;
+align-items: center;
+
+padding: 1px;
+padding-left: 5%;
+margin-top: 1%;
+margin-right: 23%;
+margin-left:35%;
+}
+input{
+    padding: 9px;
+    
+}
+   .button{
+    background-color:royalblue;
+    color: white;
+    border-radius: 30px; 
+    padding: 8px;
+    width: 150px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-left: 10%; 
+  }
+  select{
+    padding: 10px;
+    width: 185px;
+  }

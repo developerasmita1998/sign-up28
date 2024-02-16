@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup 28</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <script>
+    function validatefields(){
+      const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+      
+      var firstnameRegex = /^[a-zA-Z0-9]+$/;
+
+      var lastnameRegex = /^[a-zA-Z]+$/;
+     
+       var phonenumberRegex = /^[0-9]+$/;
+      // alert("hello")
+      // return
+        var firstname = document.getElementById("firstname").value;
+        
+        var lastname = document.getElementById("lastname").value;
+        var phonenumber = document.getElementById("phonenumber").value;
+        var email = document.getElementById("email").value;
+        var securityques = document.getElementById("securityques").value;
+        var securityans = document.getElementById("securityans").value;
+        var cityn = document.getElementById("cityn").value;
+        var address =  document.getElementById("address").value;
+        var password = document.getElementById("password").value;
+        var confirm = document.getElementById("confirm").value;
+
+
+        firstname = firstname.trim()
+        lastname = lastname.trim()
+        phonenumber = phonenumber.trim()
+        email = email.trim()
+        securityques = securityques.trim()
+        securityans = securityans.trim()
+        cityn = cityn.trim()
+        address = address.trim()
+        password = password.trim()
+        confirm = confirm.trim()
+       
+      //  var profile = document.getElementById("profile").value
+       if(firstname=="" ||lastname=="" ||phonenumber=="" 
+       ||email=="" ||securityques=="" ||securityans=="" 
+       ||cityn=="" ||address=="" ||password=="" ||confirm=="")
+       {
+        
+        if(firstname=="" && lastname=="" && phonenumber=="" &&
+         email=="" && securityques=="" && securityans=="" && 
+         cityn=="" && address=="" && password=="" && confirm=="")
+         {
+          alert("All fiels are required")
+          return false
+         }
+         
+         if(firstname=="")
+         {
+          alert("please enter firstname")
+          return false
+         }
+
+         if(!firstnameRegex.test(firstname)){
+          alert("please enter valid name")
+           return false
+         }
+
+         if(lastname=="")
+         {
+          alert("please enter lastname")
+          return false
+         }
+
+         if(!lastnameRegex.test(firstname)){
+          alert("please enter valid name")
+           return false
+         }
+
+         if(phonenumber=="")
+         {
+          alert("please enter phonenumber")
+          return false
+         }
+
+         if(!phonenumberRegex.test(phonenumber))
+         {
+          alert("please enter valid phonenumber")
+          return false
+         }
+
+         if(email=="")
+         {
+          alert("please enter email")
+          return false
+         }
+
+         if(!emailRegex.test(email))
+         {
+          alert("please enter  valid email")
+          return false
+         }
+         
+          
+         if(securityques=="")
+         {
+          alert("please enter security questions")
+          return false
+         }
+
+         if(securityans=="")
+         {
+          alert("please enter security answer")
+          return false
+         }
+
+         if(cityn=="")
+         {
+          alert("please enter city name")
+          return false
+         }
+
+         if(address=="")
+         {
+          alert("please enter address")
+          return false
+         }
+
+         if(password=="")
+         {
+          alert("please enter password")
+          return false
+         }
+
+         if(confirm=="")
+         {
+          alert("please enter confirm password")
+          return false
+         }
+        }
+
+      else
+            {
+              if(password !== confirm){
+              alert("please fill same password")
+              return false
+               
+            }
+            else{
+              alert("all good");
+             return true
+            }
+          }
+            
+       
+    }
+
+  </script>
+    <div class="outer">
+        <div class="inner">
+          <h2>Signup</h2>
+          <p>
+            <label for="firstname"></label>
+          <input type="text" id="firstname" placeholder="FirstName">
+          &nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          
+           <label for="lasttname"></label>
+          <input type="text" id="lastname" placeholder="LastName">
+          </p>
+
+          <p>
+            <label for="phonenumber"></label>
+          <input type="number" id="phonenumber" placeholder="PhoneNumber">&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          
+           <label for="email"></label>
+          <input type="email" id="email" placeholder="Email">
+          </p>
+
+          <p>
+            <label for="securityques"></label>
+            <select id="securityques">
+               <option>NickName</option>
+               <option>Pet Name</option>
+               <option>Loved Ones Name</option>
+               <option>Bestfriend Name</option>
+            </select>&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+            <label for="securityans"></label>
+            <input type="text" id="securityans" placeholder="Security Answer">
+          </p>
+          
+
+          <p>
+            <label for="cityn"></label>
+          <input type="text" id="cityn" placeholder="City Name">
+          &nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          
+           <label for="profile"></label>
+          <input type="image" id="profile" placeholder="Profile Pic">
+          </p>
+
+          <p>
+            <label for="address"></label>
+              <textarea id="address" cols="40" rows="4" placeholder="Address"></textarea>
+          </p>
+
+          <p>
+            <label for="password"></label>
+          <input type="password" id="password" placeholder="Password">
+          &nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          
+           <label for="confirm"></label>
+          <input type="password" id="confirm" placeholder="Confirm Password">
+          </p>
+
+          <p>
+            <button class="button" onclick="return validatefields()">Signup</button>
+          </p>
+
+          </div>
+    </div>
+</body>
+</html>
